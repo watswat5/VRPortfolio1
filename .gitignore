@@ -1,0 +1,46 @@
+# Unity-generated directories (applies to every Unity project in this repo)
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+
+# Unity-generated IDE and solution files
+*.csproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Unity crash reports and profiler output
+sysinfo.txt
+*.stackdump
+
+# IDE settings and caches
+.vs/
+.idea/
+.vscode/
+*.code-workspace
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local build artifacts and packages
+*.apk
+*.aab
+*.unitypackage
+

@@ -1,0 +1,53 @@
+fileFormatVersion: 2
+guid: b8888888888888888888888888888888
+ModelImporter:
+  serializedVersion: 22200
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Paint_Red
+    second: {fileID: 2100000, guid: a1111111111111111111111111111111, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Paint_Cream
+    second: {fileID: 2100000, guid: a2222222222222222222222222222222, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Paint_Dark
+    second: {fileID: 2100000, guid: a3333333333333333333333333333333, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gold
+    second: {fileID: 2100000, guid: a4444444444444444444444444444444, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Horse_White
+    second: {fileID: 2100000, guid: a5555555555555555555555555555555, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Horse_Tan
+    second: {fileID: 2100000, guid: a6666666666666666666666666666666, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lights
+    second: {fileID: 2100000, guid: a7777777777777777777777777777777, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+  meshes:
+    globalScale: 1
+    useFileScale: 1
+    preserveHierarchy: 1
+  animationType: 0
+  importAnimation: 0
+  userData:
+  assetBundleName:
+  assetBundleVariant:
