@@ -1,0 +1,5 @@
+newmtl Carousel_Body_Texture
+Kd 1.0 1.0 1.0
+Ks 0.15 0.15 0.15
+Ns 30
+map_Kd ../Textures/Carousel_Body_Albedo.png

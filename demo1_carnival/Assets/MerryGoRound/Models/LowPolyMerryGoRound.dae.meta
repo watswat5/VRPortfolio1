@@ -6,6 +6,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Carousel_Body_Texture
+    second: {fileID: 2100000, guid: a0000000000000000000000000000000, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Paint_Red
     second: {fileID: 2100000, guid: a1111111111111111111111111111111, type: 2}
   - first:
