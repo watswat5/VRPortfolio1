@@ -1,0 +1,19 @@
+# ninja log v5
+2	757	1789084210849532087	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	ff8978cd5a75b58c
+3	492	1789084210582071469	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	a45d3c36de3cb36b
+3	691	1789084210780175254	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	483ca78b0a925bff
+3	495	1789084210584871641	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	bcde9dd920c9c85e
+3	461	1789084210549488921	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	1fdd5e41afcc0df7
+3	532	1789084210623078478	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	ac28c1987578a44
+758	845	1789084210939839494	/home/chris/Documents/Shared/School/Fall 2026/VR/VRPortfolio1/demo2_sports/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4x393i3q/obj/arm64-v8a/libgame.so	3155fc431915a139
+3	518	1789084210610632365	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	a557c03382d920cc
+3	577	1789084210664831713	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	8f335137460dcc0e
+1	300	1789085525659263712	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	a45d3c36de3cb36b
+1	305	1789085525665564249	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	1fdd5e41afcc0df7
+1	312	1789085525672639753	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	bcde9dd920c9c85e
+1	315	1789085525675952952	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	a557c03382d920cc
+1	341	1789085525701640995	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	ac28c1987578a44
+1	368	1789085525727806368	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	8f335137460dcc0e
+1	431	1789085525791029047	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	483ca78b0a925bff
+1	489	1789085525848143717	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	ff8978cd5a75b58c
+489	499	1789085525861747762	/home/chris/Documents/Shared/School/Fall 2026/VR/VRPortfolio1/demo2_sports/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4x393i3q/obj/arm64-v8a/libgame.so	3155fc431915a139

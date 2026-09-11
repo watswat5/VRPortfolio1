@@ -9,6 +9,8 @@ namespace Demo2.TableTennis
     {
         [SerializeField] TableSide side;
 
+        public TableSide Side => side;
+
         void Reset() { GetComponent<Collider>().isTrigger = true; }
 
         void OnTriggerEnter(Collider other)

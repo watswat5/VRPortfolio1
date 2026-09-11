@@ -1,0 +1,30 @@
+# Materials for low_poly_loudspeaker.obj
+newmtl Housing
+Ka 0.030 0.030 0.035
+Kd 0.105 0.115 0.130
+Ks 0.080 0.080 0.080
+Ns 18.0
+
+newmtl Horn
+Ka 0.025 0.025 0.030
+Kd 0.145 0.155 0.175
+Ks 0.060 0.060 0.060
+Ns 12.0
+
+newmtl Cone
+Ka 0.015 0.015 0.018
+Kd 0.055 0.060 0.070
+Ks 0.025 0.025 0.025
+Ns 8.0
+
+newmtl Rim
+Ka 0.025 0.025 0.030
+Kd 0.190 0.205 0.230
+Ks 0.100 0.100 0.100
+Ns 24.0
+
+newmtl Driver
+Ka 0.010 0.010 0.012
+Kd 0.025 0.028 0.035
+Ks 0.020 0.020 0.020
+Ns 6.0
