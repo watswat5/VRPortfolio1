@@ -1,0 +1,63 @@
+# Flat-shaded material palette
+newmtl concrete
+Kd 0.44 0.43 0.39
+Ka 0.05 0.05 0.05
+Ks 0.0 0.0 0.0
+Ns 1
+illum 1
+
+newmtl coral
+Kd 0.62 0.23 0.16
+Ka 0.05 0.05 0.05
+Ks 0.0 0.0 0.0
+Ns 1
+illum 1
+
+newmtl dark
+Kd 0.055 0.06 0.06
+Ka 0.05 0.05 0.05
+Ks 0.0 0.0 0.0
+Ns 1
+illum 1
+
+newmtl glass
+Kd 0.18 0.31 0.32
+Ka 0.05 0.05 0.05
+Ks 0.0 0.0 0.0
+Ns 1
+illum 1
+
+newmtl metal
+Kd 0.29 0.31 0.3
+Ka 0.05 0.05 0.05
+Ks 0.0 0.0 0.0
+Ns 1
+illum 1
+
+newmtl roof
+Kd 0.075 0.085 0.09
+Ka 0.05 0.05 0.05
+Ks 0.0 0.0 0.0
+Ns 1
+illum 1
+
+newmtl stucco
+Kd 0.82 0.76 0.64
+Ka 0.05 0.05 0.05
+Ks 0.0 0.0 0.0
+Ns 1
+illum 1
+
+newmtl teal
+Kd 0.08 0.28 0.25
+Ka 0.05 0.05 0.05
+Ks 0.0 0.0 0.0
+Ns 1
+illum 1
+
+newmtl warm_light
+Kd 0.95 0.58 0.2
+Ka 0.05 0.05 0.05
+Ks 0.0 0.0 0.0
+Ns 1
+illum 1

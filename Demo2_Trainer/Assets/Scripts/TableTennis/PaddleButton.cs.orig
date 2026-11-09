@@ -1,0 +1,101 @@
+using System;
+using UnityEngine;
+
+namespace Demo2.TableTennis
+{
+    [DisallowMultipleComponent]
+    [RequireComponent(typeof(Rigidbody), typeof(SpringJoint))]
+    public sealed class PaddleButton : MonoBehaviour
+    {
+        [Header("Travel")]
+        [SerializeField, Min(.001f)] float pressDepth = .025f;
+        [SerializeField, Min(0f)] float releaseDepth = .01f;
+        [SerializeField, Min(.001f)] float maximumTravel = .05f;
+
+        [Header("Spring")]
+        [SerializeField, Min(.001f)] float buttonMass = .15f;
+        [SerializeField, Min(0f)] float springStrength = 350f;
+        [SerializeField, Min(0f)] float springDamper = 18f;
+
+        public event Action<PaddleButton> Pressed;
+
+        Rigidbody body;
+        float restY;
+        bool isPressed;
+
+        void Awake()
+        {
+            Collider buttonCollider = GetComponentInChildren<Collider>();
+            if (buttonCollider == null)
+            {
+                Debug.LogError("PaddleButton needs a non-trigger collider on its moving object.", this);
+                enabled = false;
+                return;
+            }
+
+            buttonCollider.isTrigger = false;
+            body = GetComponent<Rigidbody>();
+            restY = body.position.y;
+
+            body.mass = buttonMass;
+            body.useGravity = false;
+            body.interpolation = RigidbodyInterpolation.Interpolate;
+            body.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
+            body.constraints = RigidbodyConstraints.FreezePositionX |
+                RigidbodyConstraints.FreezePositionZ |
+                RigidbodyConstraints.FreezeRotation;
+
+            SpringJoint joint = GetComponent<SpringJoint>();
+            joint.connectedBody = null;
+            joint.autoConfigureConnectedAnchor = false;
+            joint.anchor = Vector3.zero;
+            joint.connectedAnchor = body.position;
+            joint.minDistance = 0f;
+            joint.maxDistance = 0f;
+            joint.spring = springStrength;
+            joint.damper = springDamper;
+            joint.enableCollision = false;
+        }
+
+        void FixedUpdate()
+        {
+            LimitTravel();
+            float depression = restY - body.position.y;
+
+            if (!isPressed && depression >= pressDepth)
+            {
+                isPressed = true;
+                Pressed?.Invoke(this);
+            }
+            else if (isPressed && depression <= releaseDepth)
+            {
+                isPressed = false;
+            }
+        }
+
+        void LimitTravel()
+        {
+            Vector3 position = body.position;
+            float limitedY = Mathf.Clamp(position.y, restY - maximumTravel, restY);
+            if (Mathf.Approximately(position.y, limitedY)) return;
+
+            bool movingPastLimit = (limitedY == restY && body.linearVelocity.y > 0f) ||
+                (limitedY < restY && body.linearVelocity.y < 0f);
+            position.y = limitedY;
+            body.position = position;
+
+            if (movingPastLimit)
+            {
+                Vector3 velocity = body.linearVelocity;
+                velocity.y = 0f;
+                body.linearVelocity = velocity;
+            }
+        }
+
+        void OnValidate()
+        {
+            maximumTravel = Mathf.Max(maximumTravel, pressDepth);
+            releaseDepth = Mathf.Clamp(releaseDepth, 0f, pressDepth);
+        }
+    }
+}

@@ -8,6 +8,7 @@
 [Uu]ser[Ss]ettings/
 [Mm]emoryCaptures/
 [Rr]ecordings/
+.utmp/
 
 # Unity-generated IDE and solution files
 *.csproj
@@ -27,6 +28,8 @@
 # Unity crash reports and profiler output
 sysinfo.txt
 *.stackdump
+*.log
+debug.txt
 
 # IDE settings and caches
 .vs/
@@ -44,3 +47,9 @@ Desktop.ini
 *.aab
 *.unitypackage
 
+/Demo4_Hunt/Assets/Real Stars Skybox/
+
+# Local study and recording notes (keep project README files tracked)
+/QUIZ_GUIDE.md
+/VIDEO_RECORDING_GUIDE.md
+/TODO.md

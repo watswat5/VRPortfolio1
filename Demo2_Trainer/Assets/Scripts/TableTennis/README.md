@@ -1,0 +1,32 @@
+# VR Table Tennis Trainer
+
+Add `TableCourt`, `ServeController`, `RallyScorekeeper`, and `VRTableTennisTrainer` to the scene's Field object. Assign the physical Table Surface, optional Floor Collision Root, bounds-only Player and Opponent Zones, and solid Net Surface on `TableCourt`. Assign the court, Ball Prefab, Ball Spawn, Target Zone, serve AudioSource, and start buzzer on `ServeController`. Assign the existing numeric score, misses, bonus, and serve TextMeshPro objects plus feedback audio on `RallyScorekeeper`, then assign the serve controller and scorekeeper on `VRTableTennisTrainer`. The scorekeeper also accepts optional Score Label and Misses Label 3D TextMeshPro objects; it displays `SCORE / MISSES` during normal practice and `HOME / AWAY` in AI opponent mode while reusing the same numeric values. `Initial Delay` controls startup, `Delay Between Serves` controls the cooldown after a ball ends, `Start Delay After Buzzer` controls how long after the buzzer the ball appears, `Serves Per Round` controls the countdown cycle for the serve display, and the serve margin settings keep legal first bounces away from the net and table edges. `Serve Net Clearance` rejects generated serve arcs that do not clear the assigned solid net by the requested margin. Only a physical collision with that collider causes a net foul; do not use a surrounding net trigger. Under Target, `Easy`, `Medium`, and `Hard` scale the assigned target cylinder on x/z only, making the landing spot larger or smaller without changing its height. The serve controller moves that target to a new random location on the opponent half at startup and immediately after each score or miss so the player can read the next landing spot during the buzzer and delay. The scene currently shares one 3D AudioSource between the serve controller's Start Buzzer and the scorekeeper's Foul Buzzer, Fail Buzzer, and Success Ding feedback clips. Foul plays when the trainer registers a let or other foul, failure plays when an unscored ball retires, and success plays when a point is registered.
+
+On the ball prefab, add a spatial AudioSource and assign it to `TrainingBall.Impact Audio Source`. Set suitable 3D rolloff distances, then assign separate Table And Floor Impact and Paddle Impact clips. The script forces Spatial Blend to 3D, applies a short cooldown to prevent contact chatter, and assigns a runtime physics material from the `TrainingBall` bounce settings so the ball rebounds consistently even if the prefab has no collider material set.
+
+Keep a non-trigger collider on the table top for physical bounce and assign that same collider to `TableCourt` as Table Surface. If your floor uses several colliders under one parent, assign that parent transform as Floor Collision Root. Keep bounds-only trigger colliders over each table half, attach `TableZone`, select Player or Opponent, and assign them as the court's Player and Opponent Zones. They define serve/target placement and identify the nearest table half, but do not send gameplay trigger events. A legal player return scores after its first opponent-side bounce when it next hits the floor or table. No score-zone trigger is used. The target is optional bonus credit and is not required for a valid point.
+
+The trainer exposes `NormalPractice` and `AIOpponent` modes plus Reset, Normal Practice, and AI Opponent button slots. Changing modes clears the active rally and scoreboard, then restarts serving. In AI mode, `AIPaddleController` waits for its configurable Reaction Time after the player's hit, makes one bounce/intercept prediction, and moves a velocity-bound opponent paddle into place. Its return trajectory error chance is `Base Trajectory Error Rate` plus `Movement Trajectory Error Rate` scaled by how close the required movement was to the paddle's speed limit. Inaccurate returns deliberately aim outside the player half. The console logs the prediction, required movement speed, calculated error chance, and chosen return velocity.
+
+## Controls
+
+- XR: the headset and right controller are read through Unity XR tracking. Stand still at the near end of the table.
+- The paddle transform is driven by an Input System `TrackedPoseDriver` bound to the right XR controller.
+
+## Paddle model
+
+Put `TrackedPaddle`, `PaddleHitResponder`, a dynamic Rigidbody, and the paddle collider on the player paddle root. Assign the hand-driven tracking target, Rigidbody, and responder on `TrackedPaddle`; assign Player side, the Rigidbody, collider, and a Center Of Mass transform at the controller/grip rotation pivot on `PaddleHitResponder`. Keep the Input System `TrackedPoseDriver` on the tracking target and configure its position and rotation actions for the right controller. `TrackedPaddle` supplies velocity-bound motion and player haptics, while `PaddleHitResponder` owns the shared player/AI contact math, including rotational contact velocity `ω × r`.
+
+The scene's `AI Paddle` has the same Rigidbody/collider/responder stack with side set to Opponent. It clones the player paddle renderer at runtime, parks itself behind the far edge, and remains hidden with its collider disabled in normal-practice mode.
+
+The machine serves continuously. Return the orange ball over the net so its first opponent-side bounce lands in the green target. The board records attempts and successful targets.
+
+Serve fouls can be ignored by the trainer. A serve that clips the net before it becomes playable is treated as a let and does not increment attempts or misses. Terminal balls are no longer destroyed immediately, so scored, missed, or fouled balls can finish bouncing and playing audio while the next serve is already active.
+
+## Physics
+
+All dimensions and mass use SI units: a 40 mm / 2.7 g ball and regulation placement around a 2.74 x 1.525 x 0.76 m table. Simulation runs at 72 Hz to match the headset refresh rate, with continuous ball collision detection. The ball model applies quadratic aerodynamic drag, Magnus force from spin, gradual spin decay, and rubber-paddle tangential grip.
+
+The launch velocity, spin, restitution, drag, and Magnus constants are exposed together in the scripts for easy tuning against a particular headset/controller latency profile.
+
+OpenXR 1.18 is included. The first time you target a headset platform, enable **OpenXR** for that platform under **Project Settings > XR Plug-in Management**, then select the interaction profile for your controller. This one-time checkbox creates Unity's platform-specific loader assets.

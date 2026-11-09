@@ -1,0 +1,14 @@
+newmtl Steel
+Kd 0.24 0.29 0.32
+Ks 0.4 0.4 0.4
+Ns 40
+
+newmtl Mounts
+Kd 0.13 0.17 0.19
+Ks 0.4 0.4 0.4
+Ns 40
+
+newmtl Fasteners
+Kd 0.48 0.53 0.55
+Ks 0.4 0.4 0.4
+Ns 40

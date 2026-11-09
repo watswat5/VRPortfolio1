@@ -1,0 +1,21 @@
+# Flat-shaded material palette
+newmtl dark
+Kd 0.055 0.06 0.06
+Ka 0.05 0.05 0.05
+Ks 0.0 0.0 0.0
+Ns 1
+illum 1
+
+newmtl green
+Kd 0.08 0.24 0.18
+Ka 0.05 0.05 0.05
+Ks 0.0 0.0 0.0
+Ns 1
+illum 1
+
+newmtl metal
+Kd 0.29 0.31 0.3
+Ka 0.05 0.05 0.05
+Ks 0.0 0.0 0.0
+Ns 1
+illum 1

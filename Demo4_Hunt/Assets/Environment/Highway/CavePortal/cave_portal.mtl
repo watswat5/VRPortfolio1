@@ -1,0 +1,23 @@
+newmtl Sandstone
+Kd 0.73 0.425 0.245
+Ks 0 0 0
+Ns 1
+illum 1
+
+newmtl Sandstone Sun
+Kd 0.81 0.512325 0.2997
+Ks 0 0 0
+Ns 1
+illum 1
+
+newmtl Sandstone Shade
+Kd 0.64 0.345 0.195
+Ks 0 0 0
+Ns 1
+illum 1
+
+newmtl Cave Black
+Kd 0 0 0
+Ks 0 0 0
+Ns 1
+illum 1

@@ -1,0 +1,149 @@
+Create a cohesive sequence of seven visual tutorial images for a first-person VR assembly game.
+
+GENERAL VISUAL DIRECTION
+
+Show the scene from the player’s first-person VR viewpoint at a compact industrial assembly station. Use clean, readable 3D game artwork matching a stylized industrial workshop. The product being assembled is a small round mechanical device with these parts:
+
+- Cartoon-shell base
+- Wind-up spring with a child winding key
+- Circular top cover
+- Three screws with child turning handles
+- Pressure plate
+- Hammer
+- Physical stamping tool
+
+Show two VR hands/controllers only when relevant. Use the same object proportions, lighting, camera position, and visual language in every image.
+
+Communicate primarily through:
+
+- Translucent ghost poses
+- Bright green destination highlights
+- Curved motion arrows
+- Controller-button highlights
+- Small controller diagrams
+- Green success glows
+- Red “do not do this” accents only where essential
+
+Avoid sentences, paragraphs, floating instruction panels, and excessive labels. If absolutely necessary, only use tiny universal markings such as “×5”, “×3”, a check mark, or an X.
+
+Clearly distinguish the control schemes:
+
+- Grabbing and releasing parts: squeeze and release the controller’s grab/select trigger.
+- Winding and tightening: hold the small child handle, then rotate that same hand’s thumbstick in complete clockwise circles. Do not show wrist rotation.
+- Seating the pressure plate: physically swing the hammer downward with moderate speed.
+- Stamping: physically bring the stamp down onto the completed object.
+- Mounted parts remain attached and cannot be pulled back out.
+
+Use green highlights for the currently interactive part and destination. De-emphasize all objects that are not relevant to the current step.
+
+IMAGE 1 — INSERT THE SPRING
+
+Show one VR hand squeezing the grab/select trigger while holding the loose wind-up spring above the open device shell.
+
+Highlight the spring socket inside the shell with a soft green glow. Show a translucent copy of the spring seated in the socket and a short downward placement arrow. Include a small secondary visual showing the controller trigger being released when the spring reaches the socket.
+
+The visual sequence should communicate:
+
+grab spring → place in glowing socket → release trigger
+
+Do not show thumbstick input in this image.
+
+IMAGE 2 — WIND THE SPRING
+
+Show the spring already mounted inside the shell. Highlight only the spring’s small child winding key.
+
+Show one VR hand holding that winding key. Beside the same hand’s controller, show the thumbstick with a bold clockwise circular arrow and a small “×5”.
+
+Show several faint progressive positions around the thumbstick circle and a subtle winding/ratchet effect on the key. The hand and controller should remain mostly stationary; the thumbstick is what circles.
+
+Make it unmistakable that the player circles the thumbstick clockwise five times while continuing to hold the winding key.
+
+Do not depict wrist twisting or physically rotating the whole controller.
+
+IMAGE 3 — PLACE THE COVER
+
+Show the wound spring already installed. One VR hand holds the circular top cover using the grab/select trigger.
+
+Highlight the cover socket on top of the shell in green. Show a translucent correctly aligned cover in its final position, with a short downward arrow. Show the trigger being released once aligned.
+
+The visual sequence should communicate:
+
+grab cover → align over shell → release into socket
+
+Do not show screws yet being manipulated.
+
+IMAGE 4 — INSERT AND TIGHTEN THREE SCREWS
+
+Show the cover mounted and three glowing screw holes arranged around it.
+
+Use a clear two-part visual composition:
+
+Left side:
+- A VR hand grabs one loose screw.
+- A short arrow moves it into one highlighted screw socket.
+- A small trigger-release symbol shows that it should be released into the socket.
+
+Right side:
+- The screw is mounted.
+- The hand holds the screw’s small child turning handle.
+- The same controller’s thumbstick has a clockwise circular arrow marked “×3”.
+- Show the screw gradually descending until its head touches the cover.
+
+Also show the other two screw locations with subtle repetition symbols or three green completion dots, communicating that the same process must be completed for all three screws.
+
+Make it clear that the thumbstick circles clockwise three times for each screw. Do not depict wrist rotation or turning the entire controller like a screwdriver.
+
+IMAGE 5 — PLACE THE PRESSURE PLATE
+
+Show all three screws fully seated and the cover secured.
+
+A VR hand holds the loose pressure plate using the grab/select trigger. Highlight the pressure-plate socket at the center/top of the assembly in green. Show a translucent final plate pose and a short placement arrow. Include the trigger-release symbol at the final position.
+
+The visual sequence should communicate:
+
+grab pressure plate → place in center socket → release trigger
+
+Do not show hammering until the next image.
+
+IMAGE 6 — SEAT THE PRESSURE PLATE WITH THE HAMMER
+
+Show the pressure plate mounted but slightly raised. A VR hand physically holds the hammer above it.
+
+Use a strong downward swing arc ending with the hammer head contacting the pressure plate. Communicate a controlled, medium-strength strike visually:
+
+- Green middle portion of the swing arc
+- A faint weak strike on one side marked with a small neutral/unfinished symbol
+- A dangerous overly forceful strike marked red with a warning burst
+- The correct moderate strike ends in a green seated plate and check mark
+
+Do not show a controller button being pressed. This action is controlled by the player’s real physical hammer swing speed.
+
+The image should teach: strike firmly enough to seat the plate, but not so hard that the device detonates.
+
+IMAGE 7 — APPLY THE FINAL STAMP
+
+Show the fully assembled device with its pressure plate seated. A VR hand holds the physical stamping tool directly above the intended stamp surface.
+
+Show a short, decisive downward motion arrow and the stamp contacting only the completed object. At the contact point, show the finished stamp mark appearing with a green confirmation glow and check mark.
+
+Do not show a controller-button prompt. The action is performed through physical contact and downward stamping motion.
+
+The final object should appear complete only after the visible stamp mark is applied.
+
+CONSISTENCY AND CLARITY REQUIREMENTS
+
+- Use one dominant action per image.
+- Keep instructional objects large and centered.
+- Use consistent green for valid interactions and destinations.
+- Use curved arrows only for circular thumbstick input.
+- Use straight arrows for placing parts.
+- Use swing arcs for hammer and stamp motion.
+- Controller highlights must correspond to the hand performing the action.
+- Never imply that winding or screw tightening uses wrist rotation.
+- Never imply that hammering or stamping uses a controller button.
+- Never show parts being removed after socketing.
+- Avoid unexplained UI, dialogue boxes, dense text, captions, or decorative clutter.
+- Keep every image legible when viewed as a medium-sized in-world tutorial card.
+- No extra fingers, malformed controllers, duplicated tools, floating parts, or incorrect assembly order.
+
+For the clearest results, provide screenshots of the actual shell, spring, cover, screws, plate, hammer, stamp, and controller model as visual references.

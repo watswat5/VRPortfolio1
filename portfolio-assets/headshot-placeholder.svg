@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">Headshot placeholder</title>
+  <desc id="desc">Replace this image with Christopher Antepenko's headshot.</desc>
+  <rect width="320" height="320" fill="#20242b"/>
+  <circle cx="160" cy="116" r="56" fill="#798392"/>
+  <path d="M62 292c5-74 43-112 98-112s93 38 98 112" fill="#798392"/>
+  <text x="160" y="308" fill="#f2f4f7" font-family="sans-serif" font-size="15" text-anchor="middle">REPLACE WITH HEADSHOT</text>
+</svg>
+
